@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Polinautas</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+            header {
+                background: linear-gradient(to right, #2B0013, #690028, #A00F42);
+                color: #FFFFFF;
+                text-align: center;
+                padding: 40px 0 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                position: relative;
+            }
+            header img {
+                width: 400px;
+                height: auto;
+                transition: width 0.3s ease;
+            }
+            header h1 {
+                font-size: 30px;
+                margin-top: 20px;
+                transition: font-size 0.3s ease;
+            }
+            /* Hover solo para pantallas grandes */
+            @media (min-width: 768px) {
+                header:hover img {
+                    width: 450px;
+                }
+                header:hover h1 {
+                    font-size: 35px;
+                }
+                
+        ul li i:hover {
+            background: linear-gradient(to left, #CFB789, #BA9A5F);
+        }
+            }
+            .btn-start {
+                display: block;
+                background: #A00F42;
+                color: white;
+                text-align: center;
+                padding: 12px 30px;
+                margin: 30px auto;
+                font-size: 18px;
+                font-weight: bold;
+                border: 3px solid #690028;
+                border-radius: 5px;
+                text-decoration: none;
+                width: 220px;
+                position: relative;
+                transition: all 0.3s ease;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .btn-start::before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                background: #690028;
+                z-index: -1;
+                border-radius: 5px;
+            }
+            .btn-start:hover {
+                background: #690028;
+                transform: scale(1.05);
+            }
+            .btn-start:active {
+                transform: scale(1);
+            }
+            section {
+                display: none;
+                padding: 20px;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            article {
+                background-color: #ffffff;
+                border: 1px solid #ddd;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            article:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            }
+            article h2 {
+                color: #690028;
+            }
+            .btn-download {
+                display: inline-block;
+                background: linear-gradient(to right, #690028, #A00F42);
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 15px;
+                font-size: 16px;
+                font-weight: bold;
+                border: 3px solid #690028;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .btn-download:hover {
+                background: #f2a2b7;
+                color: #690028;
+                transform: scale(1.05);
+            }
+            .btn-download:active {
+                transform: scale(1);
+            }
+            .final-text {
+                text-align: center;
+                color: #333;
+                font-size: 18px;
+                margin: 30px 0;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            ul li {
+                margin-bottom: 10px;
+            }
+            .social-buttons {
+                display: flex;
+                gap: 15px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .social-button {
+                position: relative;
+                width: 90px;
+                height: 90px;
+                border-radius: 8px;
+                overflow: hidden;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .social-button img {
+                width: 70%;
+                height: auto;
+                z-index: 2;
+            }
+            .social-button::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to bottom, #A00F42, #690028);
+                z-index: 1;
+            }
+            .social-button:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>      
+<body>
+    <header>
+        <img src="imagenes/polinautas1.png" alt="Polinautas">
+        <p>Servicio educativo para estudiantes del CECYT14</p>
+    </header>
+    <a class="btn-start" href="#main-content" onclick="showContent()">Iniciar Blog</a>
+    <section id="main-content">
+        <article>
+            <h2>¿Quiénes somos?</h2>
+            <p>
+                Los grupos <strong>5VI3</strong> y <strong>5IV4</strong> de la generación 2024 son un conjunto de estudiantes que decidieron realizar un proyecto para ayudar a los alumnos de otros grupos, otras materias y hasta otras carreras con un juego estilo trivia para estudiar y tener buenas notas en la escuela.
+            </p>
+            <p>
+                Nos dividimos el trabajo en cinco equipos:
+            </p>
+            <ul>
+                <li><strong>Programación</strong> - Diseño, Funciones, Sonido</li>
+                <li><strong>Investigación</strong> - Recolección de información clave</li>
+                <li><strong>Exposición</strong> - Presentación y difusión del proyecto</li>
+                <li><strong>Imagen</strong> - Creación de contenido visual y gráfico</li>
+                <li><strong>Inglés</strong> - Traducción y corrección en inglés</li>
+            </ul>
+            <p>
+                Nuestro objetivo principal es facilitar el aprendizaje de los estudiantes mediante herramientas educativas interactivas y efectivas. Queremos ofrecer una plataforma accesible que permita a los estudiantes repasar sus materias de manera entretenida y útil.
+            </p>
+        </article>
+        <article>
+            <h2>¿Qué ofrecemos?</h2>
+            <p>
+                A través de Polinautas, ofrecemos cuestionarios estructurados diseñados para abarcar todos los temas importantes de las materias del CECYT14. Estos cuestionarios no solo permiten repasar los temas, sino también evaluar y reforzar el conocimiento de una forma sistemática.
+            </p>
+            <p>
+                Además de los cuestionarios, nuestra plataforma también incluye:
+            </p>
+            <ul>
+                <li><strong>Facilidad de uso:</strong> Desarrollada en Java NetBeans, nuestra plataforma es intuitiva y amigable, permitiendo que los estudiantes estudien de manera cómoda y en cualquier lugar.</li>
+                <li><strong>Accesibilidad:</strong> Puedes usar la plataforma desde cualquier dispositivo y acceder a los contenidos en cualquier momento.</li>
+                <li><strong>Interactividad:</strong> Cada cuestionario tiene una estructura de preguntas que permite a los estudiantes interactuar y evaluar su conocimiento de manera dinámica.</li>
+            </ul>
+        </article>
+        <article>
+            <h2>Objetivo</h2>
+            <p>
+                Nuestro compromiso es hacer que el estudio sea más accesible y efectivo para todos los estudiantes. A través de nuestra plataforma, queremos facilitar el aprendizaje de manera estructurada y divertida, permitiendo a los estudiantes tener acceso a herramientas prácticas para su desarrollo académico y profesional.
+            </p>
+            <p>
+                Al descargar nuestro programa, podrás acceder a una serie de cuestionarios diseñados para optimizar tu estudio y ayudarte a alcanzar tus metas académicas de forma efectiva.
+            </p>
+        </article>
+        <article>
+            <h2>Descargar Polinautas</h2>
+            <p>Accede a nuestra plataforma educativa descargando el programa a través del siguiente enlace. Al hacerlo, tendrás acceso a cuestionarios interactivos que te ayudarán a repasar y mejorar tus conocimientos en todas las materias de tu carrera:</p>
+            <a class="btn-download" href="polinautas.zip" download>Descargar</a>
+        </article>
+        <article>
+            <h2>Créditos</h2>
+            <p>Personas que han contribuido al desarrollo de esta herramienta:</p>
+            <ul>
+                <li><b>Programación:</b></li>
+                <ul>
+                    <li><i>Arias Bazán Saul Zaid</i></li>
+                    <li><i>Castillo Escobar Jair Isai</i></li>
+                    <li><i>Díaz Silva Rodrigo Xchel</i></li>
+                    <li><i>Guerra Patricio Sofía</i></li>
+                    <li><i>López Olguín Rodolfo</i></li>
+                    <li><i>Martínez Ramsés Azael</i></li>
+                    <li><i>Márquez Corona David Lesem</i></li>
+                    <li><i>Moreno Martínez Diana</i></li>
+                    <li><i>Neri Arechega Rodolfo</i></li>
+                    <li><i>Orea Gil Edgar Iván</i></li>
+                    <li><i>Rosas Dávila Diego Alonso</i></li>
+                    <li><i>Salazar García Julio César</i></li>
+                    <li><i>Vázquez Arévalo Angel Gael</i></li>
+                    <li><i>Vázquez Tovar Francisco Ramsés</i></li>
+                    <li><i>Villalobos Rodríguez Daniel</i></li>
+                    <li><i>Zamora Solis Ian Danyael</i></li>
+                </ul>
+                <li><b>Investigación:</b></li>
+                <ul>
+                    <li><i>García Aguila Adriana Merary</i></li>
+                    <li><i>Hernández Hernández Alberto</i></li>
+                    <li><i>Hernández Martínez Ximena</i></li>
+                    <li><i>Melendez Rebollo Cristopher</i></li>
+                    <li><i>Muñoz Viveros Diana Avril</i></li>
+                    <li><i>Narvaez Alfonso Evelin Francheska</i></li>
+                    <li><i>Pachecho Ordaz Fernando</i></li>
+                    <li><i>Pérez Mancera Marely Joselin</i></li>
+                    <li><i>Roque Montiel Eric Alessandro</i></li>
+                    <li><i>Rangel Trejo Adamari</i></li>
+                    <li><i>Rosas Toledo Sandra Melina</i></li>
+                    <li><i>Valdéz González Kevin Iván</i></li>
+                    <li><i>Vázquez Martínez Fernanda Sofía</i></li>
+                    <li><i>Tellez Cordero Jorge</i></li>
+                </ul>
+                <li><b>Exposición:</b></li>
+                <ul>
+                    <li><i>Aranda Contreras Luis Manuel</i></li>
+                    <li><i>Chargoy Salas Sebastian</i></li>
+                    <li><i>De la Vega Figueroa Juan</i></li>
+                    <li><i>Espino Reyes Kevin Jesús</i></li>
+                    <li><i>Iniesta Rodríguez Diego Andrés</i></li>
+                    <li><i>López Ramírez Miguel Ángel</i></li>
+                    <li><i>Moreno Morales Andrés Martín</i></li>
+                    <li><i>Palacios Salauz Gustavo</i></li>
+                    <li><i>Roque Montiel Eric Alessandro</i></li>
+                    <li><i>Vázquez Luna DIlan Barush</i></li>
+                </ul>
+                <li><b>Imagen:</b></li>
+                <ul>
+                    <li><i>Arenas Fuentes Rey David</i></li>
+                    <li><i>Azuara Domínguez Lizeht</i></li>
+                    <li><i>Díaz Rodríguez Jehosua Gael</i></li>
+                    <li><i>Ibañez Díaz Abril Fernanda</i></li>
+                    <li><i>Mercado Valle Julio Cesar</i></li>
+                    <li><i>Ordoñez Figueroa Ángel Emmanuel</i></li>
+                    <li><i>Pérez Romero Fátima</i></li>
+                    <li><i>Reza tovar Ángel Marcos</i></li>
+                </ul>
+                <li><b>Inglés:</b></li>
+                <ul>
+                    <li><i>Aguilera Pineda Sonia Victoria</i></li>
+                    <li><i>Barrios Escaleras Octavio</i></li>
+                    <li><i>Campos Esquincar Christian Michel</i></li>
+                    <li><i>García Germán Luis Emilio</i></li>
+                    <li><i>García Martínez Josué Guillermo</i></li>
+                    <li><i>González Orozco Amanda</i></li>
+                    <li><i>González Urquídes Jorge Salvador</i></li>
+                    <li><i>Hernánde Flores Marco Antonio</i></li>
+                    <li><i>Ruíz Solís Aarón Fernando</i></li>
+                    <li><i>Pérez Olivares Aldo Gabriel</i></li>
+                    <li><i>Rivera Ramos Yael Edmundo</i></li>
+                    <li><i>Vazquez Hernández Michele</i></li>
+                    <li><i>Velázquez Bautista Mario Iván</i></li>
+                    <li><i>Vicencio Mendiola Tabata Yaretzi</i></li>
+                    <li><i>Zamudio Cruz Mia</i></li>
+                </ul>                
+        </ul>
+        </article>
+        <div class="social-buttons">
+            <a class="social-button tiktok" href="https://www.tiktok.com/@poli_nautas" target="_blank">
+                <img src="imagenes/tiktok1.png" alt="TikTok">
+            </a>
+            <a class="social-button instagram" href="https://www.instagram.com/poli_nautas/?next=%2F" target="_blank">
+                <img src="imagenes/instagram1.png" alt="Instagram">
+            </a>
+        </div>                      
+        <p class="final-text">
+            ¡Nos alegra que formes parte de nuestra comunidad educativa! Aprende y diviértete con Polinautas.
+        </p>
+    </section>
+
+    <script>
+        function showContent() {
+            document.querySelector('.btn-start').style.display = 'none';
+            document.querySelector('#main-content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
